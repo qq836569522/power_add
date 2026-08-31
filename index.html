@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LinguaVerse - 沉浸式多语种在线学习平台" />
+  <title>LinguaVerse · 多语种沉浸式学习平台</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+KR:wght@400;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a href="#" class="brand" data-nav="home">
+        <span class="brand-mark">L<span class="brand-dot"></span></span>
+        <span class="brand-name">LinguaVerse</span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="#" data-nav="dashboard" class="nav-link">学习中心</a>
+        <a href="#" data-nav="courses" class="nav-link">课程体系</a>
+        <a href="#" data-nav="practice" class="nav-link">互动练习</a>
+        <a href="#" data-nav="progress" class="nav-link">学习进度</a>
+        <a href="#" data-nav="path" class="nav-link">学习路径</a>
+        <a href="#" data-nav="community" class="nav-link">社区</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-switch" id="langSwitch" title="界面语言">
+          <button class="lang-btn" data-lang="zh">中</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <div class="user-chip" id="userChip" hidden>
+          <span class="avatar" id="userAvatar">U</span>
+          <span class="user-meta">
+            <span class="user-name" id="userName">访客</span>
+            <span class="user-xp"><span id="userXp">0</span> XP</span>
+          </span>
+          <button class="icon-btn" id="logoutBtn" title="退出登录">⎋</button>
+        </div>
+        <button class="btn btn-primary" id="authBtn">登录 / 注册</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主视图容器 -->
+  <main class="view" id="view"></main>
+
+  <!-- 全局提示 -->
+  <div class="toast-wrap" id="toastWrap"></div>
+
+  <!-- 模态层 -->
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>LinguaVerse © 2026 · 沉浸式多语种学习</span>
+      <span class="footer-tag">English · 日本語 · 한국어</span>
+    </div>
+  </footer>
+
+  <!-- 模块脚本（按依赖顺序） -->
+  <script src="js/i18n.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/recommend.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
